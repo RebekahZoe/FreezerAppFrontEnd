@@ -1,0 +1,15 @@
+.card{
+    border: none;
+    min-width: fit-content;
+}
+ul{
+    list-style: none;
+}
+.form-group{
+    min-width: fit-content;
+}
+#style1{
+    margin: 30px -20px 20px;
+    border: 0;
+    border-top: 1px solid;
+}
