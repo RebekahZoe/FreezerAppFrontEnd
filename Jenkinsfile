@@ -4,7 +4,7 @@ pipeline {
    stage('----Stop Previous----'){
       steps{
        sh "docker stop frontend"
-        sh "docker stop frontend"
+        sh "docker rm frontend"
         sh "docker rmi freezer-fe"
         }
       }
