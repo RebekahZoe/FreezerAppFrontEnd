@@ -1,13 +1,13 @@
 pipeline {
   agent any
   stages {
-   //stage('----Stop Previous----'){
-     // steps{
-       // sh "docker stop frontend"
-        //sh "docker stop frontend"
-        //sh "docker rmi freezer-fe"
-        //}
-      //}
+   stage('----Stop Previous----'){
+      steps{
+       sh "docker stop frontend"
+        sh "docker stop frontend"
+        sh "docker rmi freezer-fe"
+        }
+      }
    // stage('----Change Nginx Conf----'){
      // steps{
        // sh "echo 'events {}
