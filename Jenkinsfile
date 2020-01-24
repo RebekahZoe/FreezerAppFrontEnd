@@ -8,25 +8,25 @@ pipeline {
         sh "docker rmi freezer-fe"
         }
       }
-    stage('----Change Nginx Conf----'){
-      steps{
-        sh "echo 'events {}
-                  http {
-                  server {
-                    listen 80 default_server;
-                    root /opt/FreezerAppFrontEnd;
-                    index index.html;
-                    include /etc/nginx/mime.types;
-                    location / {
-                      try_files $uri $uri/ =404;
-                    }
-	                  location /FreezerApplication {
-		                  proxy_pass http://freezerapp:8082;
-	                  }
-	                }   
-                  }' >nginx.conf"
-        }
-      }
+   // stage('----Change Nginx Conf----'){
+     // steps{
+       // sh "echo 'events {}
+         //         http {
+           //       server {
+             //       listen 80 default_server;
+               //     root /opt/FreezerAppFrontEnd;
+                 //   index index.html;
+                   // include /etc/nginx/mime.types;
+                    //location / {
+                     // try_files $uri $uri/ =404;
+                    //}
+	              //    location /FreezerApplication {
+		        //          proxy_pass http://freezerapp:8082;
+	                  //}
+	                //}   
+                  //}' >nginx.conf"
+        //}
+      //}
     
    stage('----Build Image For Front End----'){
     steps{
