@@ -3,9 +3,9 @@ pipeline {
   stages {
    stage('----Stop Previous----'){
       steps{
-       sh "docker stop frontend"
-        sh "docker rm frontend"
-        sh "docker rmi freezer-fe"
+       sh "docker stop frontend -f"
+        sh "docker rm frontend -f"
+        sh "docker rmi freezer-fe -f"
         }
       }
    // stage('----Change Nginx Conf----'){
