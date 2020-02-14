@@ -101,10 +101,7 @@ function itemNameValidation(item){
 
     let format = /[!@#$%£^*&()_+\-=\[\]{};':"\\|,.<>\/?]+/;
 
-    if (hasNumber.test(item)){
-        return "Please enter a valid item name (No numbers)";
-    }
-    else if (format.test(item)){
+    if (format.test(item)){
         return "Please enter a valid item name (No special characters)";
     }
     else if (item.length < 3){
