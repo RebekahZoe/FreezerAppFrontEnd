@@ -63,6 +63,7 @@ for (let item of items){
     newRow.appendChild(newQuantity);
 
     itemList.appendChild(newRow);
+       sortTable();
 }
 }
 
