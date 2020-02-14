@@ -260,3 +260,5 @@ function myFunction() {
     }
   }
 }
+let table = document.getElementById("itemsInFreezer");
+table.addEventListener("load",sortTable());
