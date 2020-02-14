@@ -1,5 +1,11 @@
 "use strict";
 
+function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+}
+
 function getFreezers(){
     axios.get('/FreezerApplication/getAllFreezers')
     .then((response)=>{
@@ -15,7 +21,7 @@ function showFreezers(freezer){
 freezerList.innerHTML="";
 for (let f of freezer){
     const newFreezer = document.createElement("li");
-    newFreezer.innerHTML = f.freezerName;
+    newFreezer.innerHTML = toTitleCase(f.freezerName);
 
     freezerList.appendChild(newFreezer);
     newFreezer.addEventListener('click', () => redirect(f.freezerName,f.id));
