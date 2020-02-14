@@ -262,3 +262,10 @@ function myFunction() {
 }
 let table = document.getElementById("itemsInFreezer");
 table.addEventListener("load",sortTable());
+
+var mylist = $('#itemsInFreezer');
+var listitems = mylist.find('tr');
+listitems.sort(function(a, b) {
+   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+})
+$.each(listitems, function(idx, itm) { mylist.append(itm); });
