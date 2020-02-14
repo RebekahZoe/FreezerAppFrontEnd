@@ -101,8 +101,10 @@ function itemNameValidation(item){
     let hasNumber = /\d/;
 
     let format = /[!@#$%£^*&()_+\-=\[\]{};':"\\|,.<>\/?]+/;
-
-    if (format.test(item)){
+    //if (hasNumber.test(item)){
+     //      return "Please enter a valid item name (No Numbers);
+   // }
+      if (format.test(item)){
         return "Please enter a valid item name (No special characters)";
     }
     else if (item.length < 3){
@@ -117,10 +119,10 @@ function quantityValidation(quantity){
     let letters = /^[A-Za-z]+$/;
     let format = /[!@#$%&^*(£)_+\-=\[\]{};':"\\|,<>\/?]+/;
     let decimal =".";
-    if (letters.test(quantity)){
-        return "a valid quantity (no letters)"
-    }
-    else if (format.test(quantity)){
+    //if (letters.test(quantity)){
+      //  return "a valid quantity (no letters)"
+    //}
+    if (format.test(quantity)){
         return "a valid quantity (no special characters)"
     }
     else if (quantity === "0"){
