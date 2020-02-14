@@ -57,7 +57,7 @@ for (let item of items){
     let newRow= document.createElement("tr");
     let newItem = document.createElement("td");
     let newQuantity = document.createElement("td");
-    newItem.innerHTML = item.itemName;
+    newItem.innerHTML = toTitleCase(item.itemName);
     newQuantity.innerHTML = item.quantity;
     newRow.appendChild(newItem);
     newRow.appendChild(newQuantity);
