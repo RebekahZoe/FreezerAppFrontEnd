@@ -50,7 +50,7 @@ function showItemsFromFreezer(items){
 
     headerRow.appendChild(itemHeader);
     headerRow.appendChild(quantityHeader);
-    itemList.appendChild(headerRow);
+    //itemList.appendChild(headerRow);
 
     console.log(items);
 for (let item of items){
